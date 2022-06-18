@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #fff, #ccc);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.extras {
+    display: flex;
+    margin-right: 4rem;
+    width:10rem;
+    /* margin-left: 15rem; */
+    flex-direction: row;
+}
+.extras form{
+    display: flex;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.nav,
+.mobile-nav {
+    margin-right: 0.5rem;
+}
+
+.mobile-nav button,
+.mobile-logo {
+    display: none;
+}
+
+.logo {
+    margin-left: 1rem;
+    color: white;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    max-height: 100%;
+}
+
+.nav ul li {
+    flex: 1;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin-right: 1rem;
+}
+
+@media only screen and (max-width:720px) {
+    .hide {
+        display: none;
+        max-height: 100vh;
+        background-color: white;
+    }
+
+    .logo {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        color: white;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top:0;
+        width: 100vw;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .mobile-nav button {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 31px;
+        height: 100%;
+
+    }
+
+    .extras form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:white;
+        border-radius: 8px;
+    }
+
+    .extras form input {
+        padding: 0.5rem;
+        border:none;
+        border-radius: 8px;
+
+    }
+
+    .mobile-nav nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 73.9vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 10vh;
+        left: 0;
+        overflow: hidden;
+
+    }
+
+    .mobile-nav ul li a {
+        color: white;
+        font-size: 21px;
+    }
+}
