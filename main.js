@@ -15,5 +15,5 @@ body.style.background = color;
 }
 
 const redirect = () => {
-    location.href = "./navbar.html";
+    location.href = "https://riteshpoudel201.github.io/responsivenavbar/navbar.html";
 }
