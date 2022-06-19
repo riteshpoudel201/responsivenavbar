@@ -17,7 +17,7 @@ document.addEventListener("touchend",function (){ touchEnd()});
 document.addEventListener("touchmove",function (event){ touchMove(event)});
 
 
-//functions
+//functions used appear here
 const toggleIcon = (e) => {
     e.classList.toggle("bi-x-lg");
     nav.classList.toggle("hide");
