@@ -12,8 +12,8 @@ const image = document.querySelectorAll("img");
 //getting last and first child from selected images
 const lastImage = image[image.length-1];
 const firstImage = image[0];
-
-console.log(firstImage.dataset.title);
+firstImage.draggable = false;
+console.log(firstImage);
 
 
 
