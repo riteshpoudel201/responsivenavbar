@@ -12,7 +12,6 @@ body{
     width:60%;
     margin:auto;
     overflow: hidden;
-    
 }
 .carousel-slide{
     display: flex;
@@ -21,4 +20,31 @@ body{
 }
 .carousel-slide img{
     aspect-ratio: 16 / 9;
+}
+
+.carousel{
+    position:relative;
+}
+
+#prevBtn{
+    position:absolute;
+    top:50%;
+    left:1%;
+}
+#nextBtn{
+    position: absolute;
+    top:50%;
+    right:1%;
+}
+.slider-btn{
+    padding:0.8rem;
+    background-color: rgba(0,0,0,0.3);
+    color:white;
+    border:none;
+    font-size: 21px;
+    border-radius: 5px;
+}
+
+.slider-btn:hover{
+    background-color: rgba(0,0,0,0.5);
 }
