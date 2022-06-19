@@ -5,6 +5,9 @@
 //buttons
 const prevBtn = document.querySelector("#prevBtn");
 const nextBtn = document.querySelector("#nextBtn");
+
+const inner = document.querySelector(".inner-buttons");
+const innerBtn = document.querySelectorAll(".inner-button");
 //image and image containers
 const slide = document.querySelector(".carousel-slide");
 const image = document.querySelectorAll("img");
@@ -31,7 +34,12 @@ console.log(size);
 //
 nextBtn.addEventListener("click",function(event) {nextImage(event)});
 prevBtn.addEventListener("click",function(event){ prevImage(event)});
-
+//innerBtn.addEventListener("click",function(){ viewImage() });
+innerBtn.forEach(inner => {
+    var btn = 0;
+    inner.addEventListener("click", function(){ viewImage(btn) })
+    btn++
+});
 
 //
 //functions
@@ -63,6 +71,16 @@ prevBtn.addEventListener("click",function(event){ prevImage(event)});
     else{
     count--;
     slide.style.transform = "translate("+ (-size * count) + "px)";
+    }
+}
+
+function viewImage(btn){
+    // console.log(innerBtn[btn]);
+    if(innerBtn[btn].dataset.title === image[btn].id){
+        slide.style.transform = "translate("+ (-size * btn) + "px)";
+    }
+    else{
+        console.log("not matched");
     }
 }
 
